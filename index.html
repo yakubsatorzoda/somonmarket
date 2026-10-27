@@ -209,7 +209,7 @@
 
   /* Chat Bot */
   .bot-fab{
-    position:fixed; bottom:86px; right:20px; z-index:150;
+    position:fixed; bottom:142px; right:20px; z-index:150;
     width:56px; height:56px; border-radius:50%;
     background:var(--grad);
     display:flex; align-items:center; justify-content:center;
@@ -222,7 +222,7 @@
     background:var(--green); border:2px solid #fff;
   }
   .bot-panel{
-    position:fixed; bottom:154px; right:20px; z-index:150;
+    position:fixed; bottom:210px; right:20px; z-index:150;
     width:min(340px, 88vw); height:min(480px, 70vh);
     background:#fff; border-radius:16px;
     box-shadow:0 12px 40px rgba(15,23,42,.25);
@@ -311,7 +311,7 @@
 
   /* Seller Bot */
   .seller-fab{
-    position:fixed; bottom:86px; right:86px; z-index:150;
+    position:fixed; bottom:142px; right:86px; z-index:150;
     width:56px; height:56px; border-radius:50%;
     background:var(--navy);
     display:flex; align-items:center; justify-content:center;
@@ -488,7 +488,7 @@
   }
 
   .bottom-search{
-    position:fixed; left:0; right:0; bottom:0; z-index:140;
+    position:fixed; left:0; right:0; bottom:56px; z-index:140;
     background:#fff; border-top:1px solid var(--line);
     padding:10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
   }
@@ -505,7 +505,7 @@
     border:none; outline:none; background:transparent;
     flex:1; font-size:14px; color:var(--text);
   }
-  body{ padding-bottom:70px; }
+  body{ padding-bottom:130px; }
 
   /* Auth */
   .auth-btn{
@@ -574,6 +574,95 @@
     font-size:11.5px; color:var(--muted); background:var(--bg);
     border-radius:10px; padding:9px 11px; margin-top:8px; text-align:center;
   }
+
+  /* --- v2 additions --- */
+  .header-top{gap:8px;}
+  .logo{font-size:16px;}
+  #authArea{display:flex; align-items:center; gap:6px;}
+  .user-chip span{cursor:pointer;}
+  .product-img img.pimg{width:100%; height:100%; object-fit:cover; display:block;}
+  .product-img{overflow:hidden; cursor:pointer;}
+  .product-name{cursor:pointer;}
+  .filters{display:flex; gap:8px; margin:0 0 12px; flex-wrap:wrap;}
+  .filters select, .filters input{
+    border:1px solid var(--line); border-radius:9px; background:#fff;
+    padding:8px 10px; font-size:12.5px; color:var(--text); outline:none;
+    min-width:0;
+  }
+  .filters select{flex:1 1 110px;}
+  .filters input{flex:1 1 80px; width:80px;}
+  .filters .reset{
+    flex:0 0 auto; padding:8px 12px; border-radius:9px;
+    background:var(--bg); border:1px solid var(--line);
+    font-size:12px; font-weight:700; color:var(--muted);
+  }
+  .detail-img{
+    width:100%; aspect-ratio:4/3; object-fit:cover; display:block;
+    border-radius:12px; background:linear-gradient(135deg,#EEF0F4,#E4E7EE);
+    margin-bottom:12px;
+  }
+  .detail-img.ph{display:flex; align-items:center; justify-content:center; font-size:64px;}
+  .detail-price{font-size:20px; font-weight:800; color:var(--navy);}
+  .detail-name{font-size:15px; font-weight:700; margin:4px 0;}
+  .detail-meta{font-size:12px; color:var(--muted); margin-bottom:10px; line-height:1.6;}
+  .detail-desc{font-size:13px; line-height:1.5; white-space:pre-wrap; margin-bottom:12px;}
+  .seller-box{
+    background:var(--bg); border-radius:12px; padding:11px 12px;
+    font-size:12.5px; margin-bottom:10px;
+  }
+  .seller-box .sname{font-weight:700; margin-bottom:8px;}
+  .contact-row{display:flex; gap:8px;}
+  .contact-row a{
+    flex:1; text-align:center; padding:10px 0; border-radius:10px;
+    color:#fff; font-weight:700; font-size:12.5px;
+  }
+  .btn-call{background:var(--navy);}
+  .btn-wa{background:#25D366;}
+  .detail-cart{
+    width:100%; padding:12px 0; border-radius:11px;
+    background:var(--grad); color:#fff; font-weight:800; font-size:13.5px;
+  }
+  .order-card{
+    border:1px solid var(--line); border-radius:12px; padding:11px 12px; margin-bottom:10px;
+  }
+  .order-top{display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;}
+  .order-id{font-weight:800; font-size:13px;}
+  .order-status{
+    font-size:11px; font-weight:700; padding:3px 8px; border-radius:999px;
+    background:#E8F8EE; color:#15803D;
+  }
+  .order-status.progress{background:#FFF4E5; color:#B45309;}
+  .order-status.cancelled{background:#FEE2E2; color:#B91C1C;}
+  .order-items{font-size:12px; color:var(--muted); line-height:1.6;}
+  .order-total{font-weight:800; font-size:13px; margin-top:6px;}
+  .field-note{font-size:11px; color:var(--muted); margin-top:4px;}
+  textarea.field-input{resize:vertical; min-height:70px; font-family:inherit;}
+
+  /* --- v3 additions --- */
+  .recent-thumb,.cart-thumb,.mp-thumb{font-weight:800; color:var(--muted); overflow:hidden; font-size:16px;}
+  .recent-thumb img,.cart-thumb img,.mp-thumb img,.sim-thumb img{width:100%; height:100%; object-fit:cover; display:block;}
+  .product-img.noimg{aspect-ratio:16/9;}
+  .ph-label{font-size:13px; font-weight:700; color:#9AA2AF; letter-spacing:.4px;}
+  .detail-img.ph{font-size:15px; font-weight:700; color:#9AA2AF; aspect-ratio:16/9;}
+  .report-btn{
+    width:100%; margin-top:8px; padding:10px 0; border-radius:11px;
+    background:#fff; border:1px solid var(--line); color:var(--muted);
+    font-weight:700; font-size:12.5px;
+  }
+  #reportBox{margin-top:8px;}
+  #reportBox select{width:100%; margin-bottom:8px;}
+  .sim-title{font-size:13px; font-weight:800; margin:16px 0 8px;}
+  .sim-row{display:flex; gap:10px; overflow-x:auto; padding-bottom:6px; scrollbar-width:none;}
+  .sim-row::-webkit-scrollbar{display:none;}
+  .sim-card{flex:0 0 112px; border:1px solid var(--line); border-radius:11px; overflow:hidden; background:#fff; cursor:pointer;}
+  .sim-thumb{
+    height:64px; background:linear-gradient(135deg,#EEF0F4,#E4E7EE);
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; font-weight:800; color:#9AA2AF; overflow:hidden;
+  }
+  .sim-info{padding:6px 8px 8px;}
+  .sim-price{font-size:12px; font-weight:800;}
+  .sim-name{font-size:11px; color:var(--muted); line-height:1.3; margin-top:1px;}
 </style>
 </head>
 <body>
@@ -615,6 +704,12 @@
       <option value="price-desc">Нарх: қимат → арзон</option>
       <option value="rating-desc">Рейтинги баланд</option>
     </select>
+  </div>
+  <div class="filters">
+    <select id="cityFilter" onchange="renderProducts()"><option value="">Ҳама шаҳрҳо</option></select>
+    <input id="minPrice" type="number" inputmode="numeric" placeholder="Аз нарх" oninput="renderProducts()">
+    <input id="maxPrice" type="number" inputmode="numeric" placeholder="То нарх" oninput="renderProducts()">
+    <button class="reset" onclick="resetFilters()">Тоза</button>
   </div>
   <div class="grid" id="productGrid"></div>
 </main>
@@ -690,6 +785,24 @@
   </div>
 </div>
 
+<!-- Product detail -->
+<div class="auth-overlay" id="detailOverlay" onclick="if(event.target===this) closeDetail()">
+  <div class="auth-modal">
+    <button class="auth-close" onclick="closeDetail()" style="z-index:2; background:rgba(255,255,255,.9); border-radius:50%; width:30px; height:30px;">✕</button>
+    <div id="detailBody"></div>
+  </div>
+</div>
+
+<!-- Orders history -->
+<div class="auth-overlay" id="ordersOverlay" onclick="if(event.target===this) closeOrders()">
+  <div class="auth-modal">
+    <button class="auth-close" onclick="closeOrders()">✕</button>
+    <h2>Фармоишҳои ман</h2>
+    <div class="sub">Таърихи хариди шумо</div>
+    <div id="ordersBody"></div>
+  </div>
+</div>
+
 <!-- Add Listing Modal -->
 <div class="auth-overlay" id="listingOverlay" onclick="if(event.target===this) closeListing()">
   <div class="auth-modal">
@@ -710,7 +823,12 @@
     <input class="field-input" id="lCity" type="text" placeholder="Душанбе">
     <div class="field-label">Миқдор (сток)</div>
     <input class="field-input" id="lStock" type="number" value="1" min="1">
-    <button class="auth-submit" onclick="submitListing()">Эълон гузор</button>
+    <div class="field-label">Тавсиф</div>
+    <textarea class="field-input" id="lDesc" placeholder="Ҳолат, сол, рангу ғайра..."></textarea>
+    <div class="field-label">Расми мол</div>
+    <input class="field-input" id="lPhoto" type="file" accept="image/*">
+    <div class="field-note">Рақами телефони шумо (аз профил) ба харидорон барои тамос нишон дода мешавад.</div>
+    <button class="auth-submit" id="listingSubmit" onclick="submitListing()">Эълон гузор</button>
     <div class="auth-error" id="listingError"></div>
   </div>
 </div>
@@ -783,7 +901,6 @@ const SUPABASE_URL = "https://bnbqdaflpldamkzbpkis.supabase.co";
 const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJuYnFkYWZscGxkYW1remJwa2lzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTExMjk2MDUsImV4cCI6MjEwNjcwNTYwNX0.RUYgguTQAmFKp6jaGvuICXRR53cH3SoAeGV3Kxs2OGo";
 const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-const CAT_EMOJI = {"Мошин":"🚗","Телефон":"📱","Хона":"🏠"};
 
 let products = []; // loaded from Supabase
 const categories = ["Хама","Мошин","Телефон","Хона"];
@@ -812,7 +929,7 @@ function renderRecent(){
   row.innerHTML = recentlyViewed.map(id => {
     const p = products.find(x => x.id === id);
     return `<div class="recent-chip" onclick="trackView('${p.id}')">
-      <div class="recent-thumb">${CAT_EMOJI[p.category] || "🛍️"}</div>
+      <div class="recent-thumb">${thumbInner(p)}</div>
       <div class="rname">${p.name.split(" ").slice(0,2).join(" ")}</div>
     </div>`;
   }).join("");
@@ -844,6 +961,12 @@ function renderProducts(){
   const sortVal = document.getElementById("sortSelect").value;
   let list = products.filter(p => activeCat === "Хама" || p.category === activeCat);
   if(q) list = list.filter(p => p.name.toLowerCase().includes(q));
+  const cityVal = document.getElementById("cityFilter").value;
+  const minP = parseFloat(document.getElementById("minPrice").value);
+  const maxP = parseFloat(document.getElementById("maxPrice").value);
+  if(cityVal) list = list.filter(p => p.city === cityVal);
+  if(!isNaN(minP)) list = list.filter(p => p.price >= minP);
+  if(!isNaN(maxP)) list = list.filter(p => p.price <= maxP);
 
   if(sortVal === "price-asc") list = [...list].sort((a,b)=>a.price-b.price);
   else if(sortVal === "price-desc") list = [...list].sort((a,b)=>b.price-a.price);
@@ -859,18 +982,18 @@ function renderProducts(){
   }
   grid.innerHTML = list.map(p => `
     <div class="product">
-      <div class="product-img product-top-row" onclick="trackView('${p.id}')">
+      <div class="product-img product-top-row ${safeImg(p.image_url) ? '' : 'noimg'}" onclick="openDetail('${p.id}')">
         ${p.is_vip ? '<div class="vip-tag">VIP</div>' : ''}
         <div class="fav-btn ${favorites.has(p.id) ? 'active' : ''}" onclick="toggleFav('${p.id}', event)">
           ${favorites.has(p.id) ? '❤️' : '🤍'}
         </div>
-        ${CAT_EMOJI[p.category] || "🛍️"}
+        ${safeImg(p.image_url) ? `<img class="pimg" loading="lazy" src="${esc(p.image_url)}" alt="">` : `<span class="ph-label">${esc(p.category)}</span>`}
       </div>
       <div class="product-body">
         <div class="product-price">${fmt(p.price)}</div>
-        <div class="product-name">${p.name}</div>
+        <div class="product-name" onclick="openDetail('${p.id}')">${esc(p.name)}</div>
         <div class="rating"><span class="stars">${starString(p.rating)}</span> ${p.rating} (${p.reviews_count})</div>
-        <div class="product-loc">📍 ${p.city}</div>
+        <div class="product-loc">📍 ${esc(p.city)}</div>
         <div class="add-btn ${cart[p.id] ? 'added' : ''}" onclick="addToCart('${p.id}')">
           ${cart[p.id] ? `Дар сабад (${cart[p.id]})` : 'Ба сабад илова кун'}
         </div>
@@ -925,9 +1048,9 @@ function renderDrawer(){
     total += p.price * qty;
     return `
       <div class="cart-row">
-        <div class="cart-thumb">${CAT_EMOJI[p.category] || "🛍️"}</div>
+        <div class="cart-thumb">${thumbInner(p)}</div>
         <div class="cart-info">
-          <div class="name">${p.name}</div>
+          <div class="name">${esc(p.name)}</div>
           <div class="price">${fmt(p.price)}</div>
         </div>
         <div class="qty-ctrl">
@@ -1049,6 +1172,179 @@ function showToast(msg){
 document.getElementById("searchInput").addEventListener("input", renderProducts);
 
 /* ===== Load products from Supabase ===== */
+function thumbInner(p){
+  return safeImg(p.image_url)
+    ? `<img loading="lazy" src="${esc(p.image_url)}" alt="">`
+    : esc((p.name || "?").trim().charAt(0).toUpperCase());
+}
+function esc(s){
+  return String(s ?? "").replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+}
+function safeImg(u){ return typeof u === "string" && u.startsWith("https://"); }
+
+function populateCities(){
+  const sel = document.getElementById("cityFilter");
+  const current = sel.value;
+  const cities = [...new Set(products.map(p => p.city).filter(Boolean))].sort();
+  sel.innerHTML = `<option value="">Ҳама шаҳрҳо</option>` + cities.map(ci => `<option value="${esc(ci)}">${esc(ci)}</option>`).join("");
+  if(cities.includes(current)) sel.value = current;
+}
+function resetFilters(){
+  document.getElementById("cityFilter").value = "";
+  document.getElementById("minPrice").value = "";
+  document.getElementById("maxPrice").value = "";
+  renderProducts();
+}
+
+/* ===== Product detail ===== */
+function closeDetail(){ document.getElementById("detailOverlay").classList.remove("open"); }
+
+function phoneDigits(phone){
+  let d = String(phone || "").replace(/[^\d]/g, "");
+  if(d.length === 9) d = "992" + d;
+  return d;
+}
+
+async function openDetail(id){
+  const p = products.find(x => x.id === id);
+  if(!p) return;
+  trackView(id);
+  const img = safeImg(p.image_url)
+    ? `<img class="detail-img" src="${esc(p.image_url)}" alt="">`
+    : `<div class="detail-img ph">${esc(p.category)}</div>`;
+  const stockText = p.stock > 0 ? `Дар анбор: ${p.stock} дона` : "Дар анбор нест";
+  document.getElementById("detailBody").innerHTML = `
+    ${img}
+    <div class="detail-price">${fmt(p.price)}</div>
+    <div class="detail-name">${esc(p.name)}</div>
+    <div class="detail-meta">
+      <span class="stars" style="color:#F5A623">${starString(p.rating)}</span> ${p.rating} (${p.reviews_count})<br>
+      📍 ${esc(p.city)} · ${esc(p.category)} · ${stockText}
+    </div>
+    ${p.description ? `<div class="detail-desc">${esc(p.description)}</div>` : ""}
+    <div class="seller-box" id="sellerBox">Маълумоти фурӯшанда бор мешавад...</div>
+    <button class="detail-cart" onclick="addToCart('${p.id}'); closeDetail();">🛒 Ба сабад илова кун</button>
+    <div id="reportBox"><button class="report-btn" onclick="openReport('${p.id}')">🚩 Шикоят ба эълон</button></div>
+    <div id="similarBox"></div>
+  `;
+  document.getElementById("detailOverlay").classList.add("open");
+  document.querySelector("#detailOverlay .auth-modal").scrollTop = 0;
+  renderSimilar(p);
+
+  const box = document.getElementById("sellerBox");
+  if(!p.seller_id){
+    box.innerHTML = `<div class="sname">Эълони намоишӣ</div>Барои тамос бо фурӯшанда эълонҳои воқеиро бинед.`;
+    return;
+  }
+  const { data, error } = await sb.from("profiles").select("full_name,phone,city").eq("id", p.seller_id).maybeSingle();
+  if(error || !data){ box.textContent = "Маълумоти фурӯшанда дастнорас аст"; return; }
+  const digits = phoneDigits(data.phone);
+  let html = `<div class="sname">👤 ${esc(data.full_name || "Фурӯшанда")}${data.city ? " · " + esc(data.city) : ""}</div>`;
+  if(digits){
+    html += `<div class="contact-row">
+      <a class="btn-call" href="tel:+${digits}" onclick="trackContact('${p.id}','call')">📞 Занг</a>
+      <a class="btn-wa" href="https://wa.me/${digits}" target="_blank" rel="noopener" onclick="trackContact('${p.id}','whatsapp')">💬 WhatsApp</a>
+    </div>`;
+  } else {
+    html += `Рақами телефон нишон дода нашудааст.`;
+  }
+  box.innerHTML = html;
+}
+
+function trackContact(productId, kind){
+  try { sb.from("contact_clicks").insert({ product_id: productId, kind }).then(() => {}); } catch(e) {}
+}
+
+function renderSimilar(p){
+  const box = document.getElementById("similarBox");
+  if(!box) return;
+  const list = products
+    .filter(x => x.id !== p.id && x.category === p.category && x.stock > 0)
+    .sort((a, b) => Math.abs(a.price - p.price) - Math.abs(b.price - p.price))
+    .slice(0, 4);
+  if(!list.length){ box.innerHTML = ""; return; }
+  box.innerHTML = `<div class="sim-title">Молҳои монанд</div><div class="sim-row">` + list.map(x => `
+    <div class="sim-card" onclick="openDetail('${x.id}')">
+      <div class="sim-thumb">${thumbInner(x)}</div>
+      <div class="sim-info"><div class="sim-price">${fmt(x.price)}</div><div class="sim-name">${esc(x.name)}</div></div>
+    </div>`).join("") + `</div>`;
+}
+
+function openReport(productId){
+  if(!currentSession){ closeDetail(); openAuth(); showToast("Барои шикоят аввал ворид шавед"); return; }
+  document.getElementById("reportBox").innerHTML = `
+    <select class="field-input" id="reportReason">
+      <option value="scam">Қаллобӣ ё фиреб</option>
+      <option value="wrong_price">Нархи нодуруст</option>
+      <option value="wrong_photo">Расм ё тавсифи нодуруст</option>
+      <option value="other">Дигар сабаб</option>
+    </select>
+    <button class="report-btn" style="background:var(--pink); color:#fff; border:none;" onclick="submitReport('${productId}')">Фиристодани шикоят</button>`;
+}
+
+async function submitReport(productId){
+  const reason = document.getElementById("reportReason").value;
+  const { error } = await sb.from("reports").insert({ product_id: productId, reporter_id: currentSession.user.id, reason });
+  const box = document.getElementById("reportBox");
+  if(error){
+    box.innerHTML = error.code === "23505"
+      ? `<div class="field-note">Шумо қаблан ба ин эълон шикоят кардаед.</div>`
+      : `<div class="auth-error" style="display:block">Хатогӣ: ${esc(error.message)}</div>`;
+    return;
+  }
+  box.innerHTML = `<div class="field-note">Шикоят қабул шуд. Ташаккур!</div>`;
+}
+
+/* ===== Order history ===== */
+const ORDER_STATUS = {
+  accepted:["Қабул шуд","progress"], packing:["Омода мешавад","progress"],
+  courier:["Курер дар роҳ","progress"], delivered:["Расонида шуд",""], cancelled:["Бекор шуд","cancelled"]
+};
+function closeOrders(){ document.getElementById("ordersOverlay").classList.remove("open"); }
+
+async function openOrders(){
+  if(!currentSession){ openAuth(); showToast("Аввал ворид шавед"); return; }
+  const body = document.getElementById("ordersBody");
+  body.innerHTML = `<div class="sub">Бор мешавад...</div>`;
+  document.getElementById("ordersOverlay").classList.add("open");
+  const { data, error } = await sb.from("orders")
+    .select("id,status,total,created_at,order_items(quantity,price_at_purchase,products(name))")
+    .order("created_at", { ascending:false });
+  if(error){ body.innerHTML = `<div class="auth-error" style="display:block">Хатогӣ: ${esc(error.message)}</div>`; return; }
+  if(!data.length){ body.innerHTML = `<div class="sub">Шумо ҳанӯз чизе нахаридаед.</div>`; return; }
+  body.innerHTML = data.map(o => {
+    const [label, cls] = ORDER_STATUS[o.status] || [o.status, ""];
+    const date = new Date(o.created_at).toLocaleDateString("ru-RU");
+    const items = (o.order_items || []).map(it =>
+      `${esc(it.products ? it.products.name : "Мол нест")} × ${it.quantity}`).join("<br>");
+    return `<div class="order-card">
+      <div class="order-top"><span class="order-id">#${esc(o.id.slice(0,8))} · ${date}</span>
+      <span class="order-status ${cls}">${label}</span></div>
+      <div class="order-items">${items}</div>
+      <div class="order-total">${fmt(Number(o.total))}</div>
+    </div>`;
+  }).join("");
+}
+
+/* ===== Photo resize ===== */
+function resizeImage(file, maxSize = 1200){
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+    img.onload = () => {
+      let w = img.width, h = img.height;
+      const s = Math.min(1, maxSize / Math.max(w, h));
+      w = Math.round(w * s); h = Math.round(h * s);
+      const cv = document.createElement("canvas");
+      cv.width = w; cv.height = h;
+      cv.getContext("2d").drawImage(img, 0, 0, w, h);
+      cv.toBlob(b => { URL.revokeObjectURL(url); b ? resolve(b) : reject(new Error("Расм коркард нашуд")); }, "image/jpeg", 0.82);
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); reject(new Error("Расм кушода нашуд")); };
+    img.src = url;
+  });
+}
+
 async function loadProducts(){
   const grid = document.getElementById("productGrid");
   grid.innerHTML = `<div style="grid-column:1/-1; text-align:center; color:var(--muted); padding:40px 0;">Бор карда истодааст...</div>`;
@@ -1059,6 +1355,7 @@ async function loadProducts(){
     return;
   }
   products = data.map(p => ({...p, price: Number(p.price), rating: Number(p.rating)}));
+  populateCities();
   renderCats();
   renderProducts();
   renderRecent();
@@ -1078,7 +1375,7 @@ function renderAuthArea(){
     area.innerHTML = `
       <div class="user-chip">
         <div class="avatar">${initial}</div>
-        <span>${currentProfile.full_name ? currentProfile.full_name.split(" ")[0] : "Корбар"}</span>
+        <span onclick="openOrders()" title="Фармоишҳои ман">📋 ${esc(currentProfile.full_name ? currentProfile.full_name.split(" ")[0] : "Корбар")}</span>
         <div class="logout-x" onclick="doLogout()">✕</div>
       </div>
     `;
@@ -1190,22 +1487,41 @@ async function submitListing(){
   const category = document.getElementById("lCategory").value;
   const city = document.getElementById("lCity").value.trim();
   const stock = parseInt(document.getElementById("lStock").value) || 1;
+  const description = document.getElementById("lDesc").value.trim();
+  const file = document.getElementById("lPhoto").files[0];
   const errEl = document.getElementById("listingError");
+  const btn = document.getElementById("listingSubmit");
   errEl.style.display = "none";
 
   if(!name || !price){ errEl.textContent = "Ном ва нархро пур кунед"; errEl.style.display = "block"; return; }
+  if(file && !file.type.startsWith("image/")){ errEl.textContent = "Танҳо файли расм интихоб кунед"; errEl.style.display = "block"; return; }
 
-  const { error } = await sb.from("products").insert({
-    name, price, category, city, stock, sold: 0, restock_level: 2,
-    seller_id: currentSession.user.id
-  });
-  if(error){ errEl.textContent = "Хатогӣ: " + error.message; errEl.style.display = "block"; return; }
+  btn.disabled = true; btn.textContent = "Бор мешавад...";
+  try{
+    let image_url = null;
+    if(file){
+      const blob = await resizeImage(file);
+      const path = `${currentSession.user.id}/${Date.now()}.jpg`;
+      const { error: upErr } = await sb.storage.from("product-images").upload(path, blob, { contentType:"image/jpeg" });
+      if(upErr) throw upErr;
+      image_url = sb.storage.from("product-images").getPublicUrl(path).data.publicUrl;
+    }
+    const { error } = await sb.from("products").insert({
+      name, price, category, city, stock, description: description || null, image_url,
+      sold: 0, restock_level: 2, seller_id: currentSession.user.id
+    });
+    if(error) throw error;
 
-  closeListing();
-  showToast("Эълон гузошта шуд! ✓");
-  document.getElementById("lName").value = "";
-  document.getElementById("lPrice").value = "";
-  loadProducts();
+    closeListing();
+    showToast("Эълон гузошта шуд! ✓");
+    ["lName","lPrice","lDesc","lPhoto"].forEach(i => document.getElementById(i).value = "");
+    loadProducts();
+  } catch(e){
+    errEl.textContent = "Хатогӣ: " + (e.message || e);
+    errEl.style.display = "block";
+  } finally {
+    btn.disabled = false; btn.textContent = "Эълон гузор";
+  }
 }
 
 /* ===== Chat Bot ===== */
@@ -1267,9 +1583,9 @@ function botProductCards(list){
   div.className = "msg bot";
   div.innerHTML = `<div class="msg-products">` + list.map(p => `
     <div class="msg-product-card">
-      <div class="mp-thumb">${CAT_EMOJI[p.category] || "🛍️"}</div>
+      <div class="mp-thumb">${thumbInner(p)}</div>
       <div class="mp-info">
-        <div class="mp-name">${p.name}</div>
+        <div class="mp-name">${esc(p.name)}</div>
         <div class="mp-price">${fmt(p.price)} · ⭐${p.rating}</div>
       </div>
       <div class="mp-add" onclick="addToCart('${p.id}'); botToast()">Ба сабад</div>
@@ -1344,7 +1660,7 @@ function toggleSellerBot(){
     sellerGreeted = true;
     addSellerMsg(`Салом, фурӯшанда! 📦 Ман захираи молҳои шуморо назорат мекунам — чанд дона фурӯхта шуд, чанд боқӣ монд ва кай лозим аст оварда шавад.`);
     checkLowStockAlert();
-    setSellerQuickReplies(["Ҳолати сток", "Кам шудаанд", "Фурӯши мошинҳо"]);
+    setSellerQuickReplies(["Ҳолати сток", "Кам шудаанд", "Тамосҳо"]);
   }
 }
 
@@ -1393,9 +1709,9 @@ function stockCardHtml(p){
   const barColor = p.stock === 0 ? "var(--pink)" : (low ? "#F5A623" : "var(--green)");
   return `
     <div class="stock-card">
-      <div class="mp-thumb">${CAT_EMOJI[p.category] || "🛍️"}</div>
+      <div class="mp-thumb">${thumbInner(p)}</div>
       <div class="mp-info">
-        <div class="mp-name">${p.name}</div>
+        <div class="mp-name">${esc(p.name)}</div>
         <div class="stock-bar-track"><div class="stock-bar-fill" style="width:${pct}%; background:${barColor};"></div></div>
         <div class="stock-nums ${low ? 'low':''}">Фурӯхта: ${p.sold} · Боқӣ: ${p.stock}${low ? ' ⚠️ Лозим аст оварда шавад' : ''}</div>
       </div>
@@ -1419,8 +1735,8 @@ async function restock(id){
   const { error } = await sb.from("products").update({ stock: newStock }).eq("id", id);
   if(error){ addSellerMsg(`Хатогӣ: ${error.message}`); return; }
   p.stock = newStock;
-  addSellerMsg(`✅ 5 дона "${p.name}" ба анбор илова шуд ва дар Supabase сабт шуд. Ҳоло боқӣ: <b>${p.stock}</b> дона.`);
-  showToast(`Сток нав шуд: ${p.name}`);
+  addSellerMsg(`✅ 5 дона "${esc(p.name)}" ба анбор илова шуд ва дар Supabase сабт шуд. Ҳоло боқӣ: <b>${p.stock}</b> дона.`);
+  showToast(`Сток нав шуд: ${esc(p.name)}`);
   renderProducts();
 }
 
@@ -1430,7 +1746,7 @@ function checkLowStockAlert(){
     const wrap = document.getElementById("sellerMsgs");
     const div = document.createElement("div");
     div.className = "alert-msg";
-    div.innerHTML = `⚠️ <b>${low.length} мол</b> захирааш кам аст ва лозим аст оварда шавад: ${low.map(p=>p.name).join(", ")}.`;
+    div.innerHTML = `⚠️ <b>${low.length} мол</b> захирааш кам аст ва лозим аст оварда шавад: ${low.map(p=>esc(p.name)).join(", ")}.`;
     wrap.appendChild(div);
     wrap.scrollTop = wrap.scrollHeight;
   }
@@ -1439,7 +1755,23 @@ function checkLowStockAlert(){
 function respondToSeller(raw){
   const text = raw.toLowerCase();
   setTimeout(async () => {
-    if(text.includes("кам") || text.includes("лозим") || text.includes("оварда")){
+    if(text.includes("тамос") || text.includes("занг") || text.includes("whatsapp")){
+      const since = new Date(Date.now() - 30*24*3600*1000).toISOString();
+      const { data, error } = await sb.from("contact_clicks").select("product_id,kind").gte("created_at", since);
+      if(error){ addSellerMsg(`Хатогӣ: ${esc(error.message)}`); return; }
+      if(!data.length){
+        addSellerMsg("Дар 30 рӯзи охир ҳанӯз ягон тамос қайд нашудааст.");
+      } else {
+        const map = {};
+        data.forEach(r => { map[r.product_id] = map[r.product_id] || {call:0, whatsapp:0}; map[r.product_id][r.kind]++; });
+        const lines = Object.entries(map).map(([pid, v]) => {
+          const p = products.find(x => x.id === pid);
+          return `<b>${esc(p ? p.name : "Мол")}</b>: 📞 ${v.call} · 💬 ${v.whatsapp}`;
+        });
+        addSellerMsg(`Тамосҳои 30 рӯзи охир (${data.length}):<br>` + lines.join("<br>"));
+      }
+      setSellerQuickReplies(["Ҳолати сток", "Кам шудаанд"]);
+    } else if(text.includes("кам") || text.includes("лозим") || text.includes("оварда")){
       const low = products.filter(p => p.stock <= p.restock_level);
       if(low.length === 0){
         addSellerMsg("Ҳозир ҳама молҳо захираи кофӣ доранд ✅");
@@ -1480,14 +1812,14 @@ function respondToSeller(raw){
         if(error){ addSellerMsg(`Хатогӣ: ${error.message}`); return; }
         matched.stock = newStock;
         matched.sold = newSold;
-        addSellerMsg(`✅ Як дона "${matched.name}" фурӯхта шуд қайд шуд ва дар Supabase сабт шуд. Боқӣ: <b>${matched.stock}</b> дона.`);
+        addSellerMsg(`✅ Як дона "${esc(matched.name)}" фурӯхта шуд қайд шуд ва дар Supabase сабт шуд. Боқӣ: <b>${matched.stock}</b> дона.`);
         if(matched.stock <= matched.restock_level){
-          addSellerMsg(`⚠️ Диққат: захираи "${matched.name}" кам аст — лозим аст оварда шавад.`);
+          addSellerMsg(`⚠️ Диққат: захираи "${esc(matched.name)}" кам аст — лозим аст оварда шавад.`);
         }
         renderProducts();
         setSellerQuickReplies(["Ҳолати сток"]);
       } else if(matched && matched.stock === 0){
-        addSellerMsg(`"${matched.name}" дигар дар анбор нест. Лозим аст пеш аз фурӯш оварда шавад.`);
+        addSellerMsg(`"${esc(matched.name)}" дигар дар анбор нест. Лозим аст пеш аз фурӯш оварда шавад.`);
       } else {
         addSellerMsg(`Метавонед пурсед: "ҳолати сток", "кам шудаанд", ё номи як мол + "фурӯхта шуд".`);
         setSellerQuickReplies(["Ҳолати сток", "Кам шудаанд", "Фурӯши мошинҳо"]);
